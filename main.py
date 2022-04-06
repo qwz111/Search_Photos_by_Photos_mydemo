@@ -214,10 +214,10 @@ if __name__ == '__main__':
         dis, temp_ind = index_search(feature_list, topK=topK)
         # dis, ind = index_search(feature_list, topK=topK)
         ind = [temp_ind[0][0]]
-        for num in include_img:
+        for num in include_img:  # 预处理得到的包含关系图片，必须先放进最终的集合中。
             ind.append(num)
         for i in range(1, len(temp_ind[0]), 1):
-            if not (temp_ind[0][i] in ind):
+            if not (temp_ind[0][i] in ind):  # 一般有包含关系的图片，距离一定是相近的，我们把它排除即可
                 ind.append(temp_ind[0][i])
         ind = np.expand_dims(np.array(ind), axis=0)
         print('ind = ', ind)
