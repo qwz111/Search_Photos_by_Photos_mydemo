@@ -8,4 +8,4 @@
 pip install -r requirements.txt
 ```
 
-运行main.py即可
+之后运行main.py即可
