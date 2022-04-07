@@ -141,9 +141,9 @@ def find_include_img(img_path):
         else:
             print("找到图片 位置:" + str(x_) + " " + str(y_))
             include_img.append(int(file_name.split('.')[0][-6:]))
-            # plt.figure()
-            # plt.imshow(img, animated=True)
-            # plt.show()
+            plt.figure()
+            plt.imshow(img, animated=True)
+            plt.show()
 
 
 def visual_plot(ind, dis, topK, query_img=None):
@@ -191,7 +191,7 @@ if __name__ == '__main__':
     create_index()
     index = faiss.read_index('index_file.index')
     # print("DEBUG3")
-    img_id = '100212.jpg'
+    img_id = '101002.jpg'
     img_path = os.path.join(img_folder, img_id)
 
     img = Image.open(img_path)
