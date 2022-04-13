@@ -7,8 +7,8 @@ Created on Thu Apr  7 16:35:39 2022
 import csv
 import py2neo
 from py2neo import Graph,Node,Relationship,NodeMatcher
-g=Graph('http://localhost:7474',user='neo4j',password='12345')
-with open('E:\data/tuples.csv','r',encoding='gbk') as f:
+g=Graph('http://localhost:7474',user='neo4j',password='qwz')
+with open('tuples.csv','r',encoding='gbk') as f:
     reader=csv.reader(f)
     for item in reader:
         if reader.line_num==1:
