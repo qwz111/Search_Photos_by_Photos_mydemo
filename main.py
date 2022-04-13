@@ -96,6 +96,8 @@ def search_returnPoint(img, template, template_size):
     # print(img)
     img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     template_ = cv2.cvtColor(template, cv2.COLOR_BGR2GRAY)
+    img_gray = transform(img_gray)
+    template_ = transform(template_)
     if template.shape[0]>img.shape[0] or template.shape[1]>img.shape[1] or template.shape[2]>img.shape[2]:
         return None, None, None
     result = cv2.matchTemplate(img_gray, template_, cv2.TM_CCOEFF_NORMED)
